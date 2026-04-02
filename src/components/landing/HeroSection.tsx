@@ -24,7 +24,7 @@ const HeroSection = () => (
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-        <a href="https://calendly.com/leekissy18/frontdesk-demo" target="_blank" rel="noopener noreferrer">
+        <a href="https://calendar.app.google/bUrF5vgq4YGQyD1A7" target="_blank" rel="noopener noreferrer">
           <Button variant="hero" size="lg" className="text-base px-8 py-6">
             Book a Demo
           </Button>
