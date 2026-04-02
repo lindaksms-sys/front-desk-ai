@@ -24,9 +24,11 @@ const HeroSection = () => (
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-        <Button variant="hero" size="lg" className="text-base px-8 py-6">
-          Book a Demo
-        </Button>
+        <a href="https://calendly.com/leekissy18/frontdesk-demo" target="_blank" rel="noopener noreferrer">
+          <Button variant="hero" size="lg" className="text-base px-8 py-6">
+            Book a Demo
+          </Button>
+        </a>
         <Button variant="hero-outline" size="lg" className="text-base px-8 py-6">
           Watch 60-Second Demo
         </Button>
