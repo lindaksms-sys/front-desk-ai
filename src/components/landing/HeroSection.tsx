@@ -29,9 +29,11 @@ const HeroSection = () => (
             Book a Demo
           </Button>
         </a>
-        <Button variant="hero-outline" size="lg" className="text-base px-8 py-6">
-          Watch 60-Second Demo
-        </Button>
+        <a href="https://frontdesk.creativehauz.space/dashboard" target="_blank" rel="noopener noreferrer">
+          <Button variant="hero-outline" size="lg" className="text-base px-8 py-6">
+            See Demo Clinic
+          </Button>
+        </a>
       </div>
       <p className="text-sm text-hero-muted/60">
         Fast setup. No extra front-desk headcount. Built for modern clinics.
