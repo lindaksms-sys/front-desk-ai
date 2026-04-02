@@ -1,4 +1,4 @@
-import { Search, Upload, PhoneOff } from "lucide-react";
+import { Search, Upload, PhoneOff, Phone, FileText } from "lucide-react";
 
 const bullets = [
   { icon: Search, text: "Patients find booked appointments by phone number." },
@@ -32,32 +32,70 @@ const PatientPortalSection = () => (
           </div>
         </div>
 
-        {/* Mock portal UI */}
-        <div className="bg-card rounded-2xl border border-border shadow-lg p-6">
-          <h3 className="text-lg font-semibold text-foreground mb-4">Find Your Appointment</h3>
-          <div className="bg-secondary rounded-lg p-3 mb-4">
-            <p className="text-sm text-muted-foreground">Phone number</p>
-            <p className="text-foreground font-mono">+1 (555) 123-4567</p>
-          </div>
-          <div className="border border-border rounded-xl p-4 mb-3">
-            <div className="flex justify-between items-start mb-2">
+        {/* Mock portal UI matching reference */}
+        <div className="bg-card rounded-2xl border border-border shadow-lg overflow-hidden">
+          {/* Portal header */}
+          <div className="bg-navy px-5 py-3 flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <div className="w-7 h-7 rounded-full bg-teal flex items-center justify-center text-white text-[10px] font-bold">FD</div>
               <div>
-                <p className="font-medium text-foreground">Dental Cleaning</p>
-                <p className="text-sm text-muted-foreground">Dr. Miller</p>
+                <p className="text-xs font-semibold text-white leading-tight">Austin Clinic</p>
+                <p className="text-[9px] text-hero-muted">Demo Patient Portal for Frontdesk</p>
               </div>
-              <span className="text-xs bg-teal-light text-teal px-2 py-1 rounded-full font-medium">Confirmed</span>
             </div>
-            <p className="text-sm text-muted-foreground">Tue, Jan 14 — 9:00 AM</p>
+            <span className="text-[10px] text-hero-muted">Clinic Staff Login</span>
           </div>
-          <div className="border border-border rounded-xl p-4">
-            <div className="flex justify-between items-start mb-2">
-              <div>
-                <p className="font-medium text-foreground">Consultation</p>
-                <p className="text-sm text-muted-foreground">Dr. Chen</p>
-              </div>
-              <span className="text-xs px-2 py-1 rounded-full font-medium" style={{ backgroundColor: "hsl(var(--warning-light))", color: "hsl(var(--warning-foreground))" }}>Pending</span>
+
+          <div className="p-5 md:p-6">
+            {/* Welcome heading */}
+            <div className="text-center mb-5">
+              <h3 className="text-lg font-bold text-foreground mb-1">Welcome to Your Patient Portal</h3>
+              <p className="text-xs text-muted-foreground">View your appointments, cancel if needed, and upload intake forms — all in one place.</p>
+              <p className="text-[10px] text-muted-foreground/60 mt-1">Appointments and documents shown here are sample data.</p>
             </div>
-            <p className="text-sm text-muted-foreground">Wed, Jan 22 — 10:30 AM</p>
+
+            {/* Find My Appointments */}
+            <div className="border border-border rounded-xl p-4 mb-4">
+              <div className="flex items-center gap-2 mb-1">
+                <Phone className="w-4 h-4 text-teal" />
+                <h4 className="font-semibold text-sm text-foreground">Find My Appointments</h4>
+              </div>
+              <p className="text-[11px] text-teal mb-3">Enter the phone number you used when booking</p>
+              <div className="flex gap-2">
+                <div className="flex-1 border border-border rounded-lg px-3 py-2">
+                  <p className="text-xs text-muted-foreground">e.g. +1 (555) 123-4567</p>
+                </div>
+                <div className="bg-teal text-white text-xs font-medium px-4 py-2 rounded-lg flex items-center gap-1.5 whitespace-nowrap">
+                  <Search className="w-3 h-3" />
+                  Find My Appointments
+                </div>
+              </div>
+            </div>
+
+            {/* Upload Intake Form */}
+            <div className="border border-border rounded-xl p-4">
+              <div className="flex items-center gap-2 mb-1">
+                <FileText className="w-4 h-4 text-teal" />
+                <h4 className="font-semibold text-sm text-foreground">Upload Intake Form</h4>
+              </div>
+              <p className="text-[11px] text-muted-foreground mb-3">New patient? Upload your completed intake form before your visit to save time.</p>
+
+              <p className="text-xs font-medium text-foreground mb-1">Your Phone Number</p>
+              <div className="border border-border rounded-lg px-3 py-2 mb-3">
+                <p className="text-xs text-muted-foreground">e.g. +15551234567</p>
+              </div>
+
+              <p className="text-xs font-medium text-foreground mb-1">Select Document</p>
+              <div className="border border-border rounded-lg px-3 py-2 mb-1">
+                <p className="text-xs text-muted-foreground">Choose File &nbsp; No file chosen</p>
+              </div>
+              <p className="text-[10px] text-muted-foreground mb-3">PDF, JPG, PNG, or Word documents accepted</p>
+
+              <div className="bg-teal text-white text-xs font-medium px-4 py-2 rounded-lg inline-flex items-center gap-1.5">
+                <Upload className="w-3 h-3" />
+                Upload Form
+              </div>
+            </div>
           </div>
         </div>
       </div>
