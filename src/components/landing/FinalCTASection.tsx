@@ -17,6 +17,10 @@ const FinalCTASection = () => (
       <p className="text-sm text-hero-muted/60">
         See the live flow, ask questions, and get a setup plan for your clinic.
       </p>
+      <p className="text-sm text-hero-muted/60 mt-2">
+        If you'd like to talk before booking a demo, email{" "}
+        <a href="mailto:info@creativehauz.space" className="text-teal hover:underline">info@creativehauz.space</a>.
+      </p>
     </div>
   </section>
 );
