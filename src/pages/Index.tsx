@@ -11,23 +11,23 @@ import PricingSection from "@/components/landing/PricingSection";
 import FAQSection from "@/components/landing/FAQSection";
 import FinalCTASection from "@/components/landing/FinalCTASection";
 import FooterSection from "@/components/landing/FooterSection";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const Index = () => (
   <main>
     <HeroSection />
-    <ProblemSection />
-    <SolutionSection />
-    <HowItWorksSection />
-    <DashboardOverviewSection />
-    <PatientPortalSection />
-    <DashboardDetailSection />
-    <BenefitsSection />
-    <WhoItsForSection />
-    <PricingSection />
-    <FAQSection />
-    <FinalCTASection />
-    <FooterSection />
+    <ScrollReveal><ProblemSection /></ScrollReveal>
+    <ScrollReveal><SolutionSection /></ScrollReveal>
+    <ScrollReveal><HowItWorksSection /></ScrollReveal>
+    <ScrollReveal><DashboardOverviewSection /></ScrollReveal>
+    <ScrollReveal><PatientPortalSection /></ScrollReveal>
+    <ScrollReveal><DashboardDetailSection /></ScrollReveal>
+    <ScrollReveal><BenefitsSection /></ScrollReveal>
+    <ScrollReveal><WhoItsForSection /></ScrollReveal>
+    <ScrollReveal><PricingSection /></ScrollReveal>
+    <ScrollReveal><FAQSection /></ScrollReveal>
+    <ScrollReveal><FinalCTASection /></ScrollReveal>
+    <ScrollReveal><FooterSection /></ScrollReveal>
   </main>
 );
-
 export default Index;
