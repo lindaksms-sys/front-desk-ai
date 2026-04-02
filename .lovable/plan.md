@@ -1,17 +1,23 @@
 
 
-## Plan: Update Dashboard Overview Section Copy
+## Plan: Add scroll-in animations to landing page sections
 
-**File:** `src/components/landing/DashboardOverviewSection.tsx` (lines 48-53)
+### Approach
+
+Create a reusable `ScrollReveal` wrapper component that uses the Intersection Observer API to detect when a section enters the viewport, then applies a fade-up animation. Wrap each section (except Hero, which is already visible on load) in this component.
 
 ### Changes
 
-Replace the current heading and subheading:
-- **Current heading:** "One screen for today's front desk"
-- **New heading:** "See Frontdesk in a live demo clinic"
+**1. Create `src/components/ScrollReveal.tsx`**
+- A wrapper component using `useEffect` + `IntersectionObserver`
+- Starts with `opacity-0 translate-y-8`, transitions to `opacity-100 translate-y-0` when visible
+- Uses `threshold: 0.1` and `once` behavior (no re-hiding on scroll up)
+- Configurable delay prop for staggering if needed
 
-- **Current subheading:** "See appointments, calls, reminders, and upcoming activity at a glance."
-- **New subheading:** "Explore the demo clinic dashboard and patient portal to see how AI-handled calls turn into real appointments and reminders."
+**2. Update `src/pages/Index.tsx`**
+- Import `ScrollReveal`
+- Wrap each section (ProblemSection through FooterSection) in `<ScrollReveal>`
+- Hero stays unwrapped (immediately visible)
 
-Single file edit, two lines of text changed.
+No tailwind config changes needed — uses inline transition classes (`transition-all duration-700 ease-out`).
 
