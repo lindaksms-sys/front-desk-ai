@@ -55,7 +55,7 @@ const PatientPortalSection = () => (
                 <p className="font-medium text-foreground">Consultation</p>
                 <p className="text-sm text-muted-foreground">Dr. Chen</p>
               </div>
-              <span className="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full font-medium">Pending</span>
+              <span className="text-xs px-2 py-1 rounded-full font-medium" style={{ backgroundColor: "hsl(var(--warning-light))", color: "hsl(var(--warning-foreground))" }}>Pending</span>
             </div>
             <p className="text-sm text-muted-foreground">Wed, Jan 22 — 10:30 AM</p>
           </div>

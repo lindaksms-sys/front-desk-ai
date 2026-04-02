@@ -23,8 +23,8 @@ const DashboardOverviewSection = () => (
         <div className="bg-navy p-3 flex items-center gap-2">
           <div className="flex gap-1.5">
             <div className="w-3 h-3 rounded-full bg-destructive/60" />
-            <div className="w-3 h-3 rounded-full bg-yellow-400/60" />
-            <div className="w-3 h-3 rounded-full bg-green-400/60" />
+            <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "hsl(var(--warning) / 0.6)" }} />
+            <div className="w-3 h-3 rounded-full" style={{ backgroundColor: "hsl(var(--success-light) / 0.6)" }} />
           </div>
           <span className="text-xs text-hero-muted ml-2">Frontdesk — Overview</span>
         </div>
