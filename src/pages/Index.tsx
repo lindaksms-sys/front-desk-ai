@@ -10,6 +10,7 @@ import WhoItsForSection from "@/components/landing/WhoItsForSection";
 import PricingSection from "@/components/landing/PricingSection";
 import FAQSection from "@/components/landing/FAQSection";
 import FinalCTASection from "@/components/landing/FinalCTASection";
+import FooterSection from "@/components/landing/FooterSection";
 
 const Index = () => (
   <main>
@@ -25,6 +26,7 @@ const Index = () => (
     <PricingSection />
     <FAQSection />
     <FinalCTASection />
+    <FooterSection />
   </main>
 );
 
