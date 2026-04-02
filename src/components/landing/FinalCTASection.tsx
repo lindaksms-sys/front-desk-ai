@@ -9,9 +9,11 @@ const FinalCTASection = () => (
       <p className="text-hero-muted text-lg mb-10 leading-relaxed">
         Book a demo to see how your AI voice receptionist, patient portal, and clinic dashboard work together in one system.
       </p>
-      <Button variant="hero" size="lg" className="text-base px-10 py-6 mb-4">
-        Book a Demo
-      </Button>
+      <a href="https://calendly.com/leekissy18/frontdesk-demo" target="_blank" rel="noopener noreferrer">
+        <Button variant="hero" size="lg" className="text-base px-10 py-6 mb-4">
+          Book a Demo
+        </Button>
+      </a>
       <p className="text-sm text-hero-muted/60">
         See the live flow, ask questions, and get a setup plan for your clinic.
       </p>
