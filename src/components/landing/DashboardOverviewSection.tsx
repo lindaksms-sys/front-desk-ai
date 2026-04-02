@@ -41,7 +41,7 @@ const DashboardOverviewSection = () => (
             {["Dr. Miller — Cleaning — 9:00 AM — Confirmed", "Dr. Chen — Consult — 10:30 AM — Pending", "Dr. Miller — Follow-up — 2:00 PM — Confirmed"].map((row, i) => (
               <div key={i} className="bg-card rounded-lg p-3 border border-border text-sm text-muted-foreground flex justify-between">
                 <span>{row}</span>
-                <span className={i === 1 ? "text-yellow-600 font-medium" : "text-teal font-medium"}>{i === 1 ? "Pending" : "Confirmed"}</span>
+                <span className={`font-medium ${i === 1 ? "" : "text-teal"}`} style={i === 1 ? { color: "hsl(var(--warning-foreground))" } : undefined}>{i === 1 ? "Pending" : "Confirmed"}</span>
               </div>
             ))}
           </div>
