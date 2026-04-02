@@ -62,7 +62,7 @@ const PricingSection = () => (
                 </li>
               ))}
             </ul>
-            <a href="https://calendly.com/leekissy18/frontdesk-demo" target="_blank" rel="noopener noreferrer" className="w-full">
+            <a href="https://calendar.app.google/bUrF5vgq4YGQyD1A7" target="_blank" rel="noopener noreferrer" className="w-full">
               <Button
                 variant={plan.highlighted ? "hero" : "outline"}
                 className="w-full"
