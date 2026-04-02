@@ -46,10 +46,10 @@ const DashboardOverviewSection = () => (
     <div className="max-w-6xl mx-auto">
       <div className="text-center mb-14">
         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-          One screen for today's front desk
+          See Frontdesk in a live demo clinic
         </h2>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-          See appointments, calls, reminders, and upcoming activity at a glance.
+          Explore the demo clinic dashboard and patient portal to see how AI-handled calls turn into real appointments and reminders.
         </p>
       </div>
 
