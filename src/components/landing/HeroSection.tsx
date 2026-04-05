@@ -12,7 +12,7 @@ const HeroSection = () => (
         <span className="text-gradient">Your AI front desk answers.</span>
       </h1>
       <p className="text-lg md:text-xl text-hero-muted max-w-3xl mx-auto mb-10 leading-relaxed">
-        Handle bookings, reschedules, cancellations, reminders, patient self-service, and front-desk tracking in one system, so your team spends less time on calls and more time with patients.
+        We install an AI front desk for clinics that answers missed calls, books appointments, handles reschedules, and sends reminders.
       </p>
 
       <div className="flex items-center justify-center gap-3 text-sm text-hero-muted mb-10">
