@@ -23,21 +23,28 @@ const HeroSection = () => (
         <span className="flex items-center gap-1.5"><LayoutDashboard className="w-4 h-4 text-teal" /> Live clinic dashboard</span>
       </div>
 
-      <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+      <div className="flex justify-center mb-6">
         <a href="https://calendar.app.google/bUrF5vgq4YGQyD1A7" target="_blank" rel="noopener noreferrer">
           <Button variant="hero" size="lg" className="text-base px-8 py-6">
             Book a Demo
           </Button>
         </a>
-        <a href="https://frontdesk.creativehauz.space/dashboard" target="_blank" rel="noopener noreferrer">
-          <Button variant="hero-outline" size="lg" className="text-base px-8 py-6">
-            See Demo Clinic
-          </Button>
-        </a>
       </div>
-      <p className="text-sm text-hero-muted/60">
+      <p className="text-sm text-hero-muted/60 mb-10">
         Fast setup. No extra front-desk headcount. Built for modern clinics.
       </p>
+
+      <div className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl border border-white/10">
+        <video
+          className="w-full"
+          autoPlay
+          muted
+          loop
+          playsInline
+          controls
+          src="/videos/demo.mp4"
+        />
+      </div>
     </div>
   </section>
 );
