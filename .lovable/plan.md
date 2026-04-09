@@ -1,20 +1,29 @@
 
-Summary
 
-This looks like a URL/domain mismatch or caching issue, not a missing code change in this repo.
+## Plan: Fix video delivery for custom domain (GitHub → Cloudflare)
 
-What I verified
-- `src/components/landing/HeroSection.tsx` already contains the embedded `/videos/demo.mp4` player and only a `Book a Demo` button.
-- `See Demo Clinic` no longer appears anywhere in `src`.
-- The published Lovable URL `https://smartdesk-harmony.lovable.app` already shows the updated hero with the video.
-- `https://frontdesk.creativehauz.space` is serving a different app (the demo clinic/patient portal), so landing-page changes from this project will not appear there.
+### Problem
+The 77MB demo video exceeds Cloudflare Pages' 25MB per-file asset limit, so it's excluded from the deployment. The landing page on your custom domain still shows the old "See Demo Clinic" button because the video never deployed.
 
-Plan
-1. Confirm the exact URL you are opening when you say “live landing page.”
-2. If it is a custom domain, verify that the domain is connected to this landing-page project and not the separate demo clinic project.
-3. If it is `smartdesk-harmony.lovable.app`, the latest version is already live, so test with a hard refresh or an incognito window to rule out stale cache.
-4. Do not make more landing-page code changes yet; the current repo and the published `.lovable.app` deployment already match.
+### Solution Options (pick one)
 
-Technical details
-- Verified against: `src/components/landing/HeroSection.tsx`, `src/pages/Index.tsx`, and the live HTML/screenshot for `https://smartdesk-harmony.lovable.app`.
-- I also found an unrelated React warning from `ScrollReveal` refs in `Index`; worth fixing separately, but it does not explain the missing hero update.
+**Option A — Compress the video (recommended)**
+- Use ffmpeg to compress the video to under 25MB (lower resolution/bitrate)
+- Keep it in `public/videos/demo.mp4`
+- Everything deploys normally
+
+**Option B — Host video externally**
+- Upload the video to a service (YouTube, Vimeo, Cloudflare Stream, or an R2 bucket)
+- Update `HeroSection.tsx` to use the external URL instead of `/videos/demo.mp4`
+- Remove the large file from the repo
+
+### What I'll do (Option A)
+1. Compress `public/videos/demo.mp4` to ~15-20MB using ffmpeg (720p, optimized bitrate)
+2. Replace the existing file
+3. Verify it still looks good
+
+### Technical details
+- Target: 720p, CRF 28-30, H.264, ~15-20MB
+- No code changes needed — the `<video>` tag already points to `/videos/demo.mp4`
+- After compression, the file will deploy through GitHub → Cloudflare without hitting size limits
+
