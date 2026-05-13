@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://smartdesk-harmony.lovable.app/sitemap.xml
