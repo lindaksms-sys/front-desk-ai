@@ -42,6 +42,8 @@ const HeroSection = () => (
           loop
           playsInline
           controls
+          preload="metadata"
+          poster="/videos/demo-poster.jpg"
           src="/videos/demo.mp4"
         />
       </div>
